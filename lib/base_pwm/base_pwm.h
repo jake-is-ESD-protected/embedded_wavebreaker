@@ -69,7 +69,10 @@ private:
     Calc a max amplitude squarewave of 50% duty cycle
     */
     void calc_sine(){
-
+        double omega = (2*PI)/MAX_8BIT;
+        for(uint8_t i=0; i<MAX_8BIT; i++){
+            lut[i] = sin(omega * i);
+        } 
     }
 };
 
